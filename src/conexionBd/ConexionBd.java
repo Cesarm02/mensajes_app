@@ -10,9 +10,7 @@ public class ConexionBd {
 		Connection conection = null;
 		try{
 			conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javasepersistencia", "root", "");
-			if(conection != null) {
-				System.out.println("Conexion exictosa");
-			}
+			
 		}catch(SQLException e) {
 			System.out.println(e);
 		}
