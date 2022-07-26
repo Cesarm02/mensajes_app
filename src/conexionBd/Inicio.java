@@ -24,15 +24,19 @@ public class Inicio {
 			switch (opcion) {
 			case 1: {
 				MensajeService.crearMensaje();
+				break;
 			}
 			case 2:{
 				MensajeService.listarMensaje();
+				break;
 			}
 			case 3:{
 				MensajeService.editarMensaje();
+				break;
 			}
 			case 4:{
 				MensajeService.borrarMensaje();
+				break;
 			}
 			default:
 				break;
