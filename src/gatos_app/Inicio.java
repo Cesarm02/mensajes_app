@@ -1,15 +1,18 @@
 package gatos_app;
 
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
 
 public class Inicio {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		int opcionMenu = -1;
 		String[] botones = {
 				" 1. Ver gatos",
-				" 2. Salir"
+				" 2. Ver favoritos",
+				" 3. Salir"
 		};
 		
 		do {
@@ -27,6 +30,10 @@ public class Inicio {
 			switch(opcionMenu) {
 				case 0:
 					GatoService.verGatos();
+					break;
+				case 1:
+					Gato gatito = new Gato();
+					GatoService.verFavoritos(gatito.getApikey());
 					break;
 				default:
 					break;
